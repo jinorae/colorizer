@@ -17,6 +17,9 @@
             resize: both;
             width: 100%;
         }
+        #textarea:empty:not(:focus):before {
+            content:attr(placeholder)
+        }
     </style>
 </head>
 
@@ -29,7 +32,7 @@
   <label class="control-label" for="textarea"></label>
   <div class="controls">                     
     <!-- <textarea id="textarea" name="textarea" rows="25" style="width: 100%">paste it here...</textarea> -->
-    <div id="textarea" contentEditable="true">paste it here...</div>
+    <div id="textarea" contentEditable="true" placeholder="paste it here..."></div>
   </div>
 </div>
 
