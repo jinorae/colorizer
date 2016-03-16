@@ -83,7 +83,8 @@
                           }
                       }
                     return "[IMG]https://raw.githubusercontent.com/po-devs/pokemon-online/master/bin/db/pokes/" + gen + "G/sprites/" + genFolder[gen] + "/" + (back == "true" ? "back/" : "") + (shiny == "true" ? "shiny/" : "") + num + ".png[/IMG]";
-                  });
+                  })
+                  .replace(/<img src="icon:(.+?)">/gi, '[IMG]https://raw.githubusercontent.com/po-devs/pokemon-online/master/bin/db/pokes/icons/$1.png[/IMG]');
         document.newData = false;
     };
     document.getElementById("ticonvert").onclick = function() {
