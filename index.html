@@ -56,6 +56,7 @@
                   .replace(/ align="center"(.+?>)(.+?)<\/p>/g, '$1[CENTER]$2[/CENTER]</p>')
                   .replace(/<p.*?>(.*?)<\/p>/g, '$1<br />')
                   .replace(/ color:(.*?);(.+?>)(.+?)<\/span>/g, '$2[COLOR=$1]$3[/COLOR]</span>')
+                  .replace(/\[COLOR=#000000\](.*?)\[\/COLOR\]/ig, '$1')
                   .replace(/ font-weight:600;(.+?>)(.+?)<\/span>/g, '$1[B]$2[/B]</span>')
                   .replace(/ font-style:italic;(.+?>)(.+?)<\/span>/g, '$1[I]$2[/I]</span>')
                   .replace(/<span style=.*?>(.+?)<\/span>/g, '$1')
